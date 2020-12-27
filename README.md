@@ -87,11 +87,11 @@ Manager test;//定义对象
 	}
 ```
 
-#The Header file 1：manager.h
+# The Header file 1：manager.h
 ## The Header file 2: post.h
 ###  The Header file 3 and 4:admin.h ,worker.h 
 
-##content
+## content
 1.Description of basic functions
 2.Design ideas
 
@@ -99,6 +99,6 @@ Manager test;//定义对象
 **First** and _Italic_ and `Code` text
 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details see [杜研书的主页](https://duyanshu.girhub.io).
 
-###to be perfected
+### Under development...
