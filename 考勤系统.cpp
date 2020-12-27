@@ -1,31 +1,25 @@
-//ä½œè€…ï¼šæœç ”ä¹¦
-//å­¦æ ¡ï¼šä¸œåŒ—å¤§å­¦ç§¦çš‡å²›åˆ†æ ¡
-//é¡¹ç›®åï¼šå…¬å¸å‘˜å·¥è€ƒå‹¤ç®¡ç†ç³»ç»Ÿ
-//é‚®ç®±ï¼š2544823286@qq.com
-//Author : Du Yanshu
-//School : North East University Qinhuangdao
-//Project name : the company's employee attendance management system
-//E - mail : 2544823286@qq.com
 #include <iostream>
 #include "manager.h"
+//#include <Windows.h>
 #include "admin.h"
+//#include "worker.h"
 #include <iomanip>
 
 using namespace std;
 int main()
 {
-	Manager test;//å®šä¹‰å¯¹è±¡
-	re_login://é‡æ–°ç™»å½•æ¥å£
-	cout << setw(30) << setfill('*') << "*" << " æ¬¢è¿ç™»å½• [äººäº‹] [å·¥èµ„] [è€ƒå‹¤] ç³»ç»Ÿ " << setw(30) << setfill('*') << "* " << endl;
+	Manager test;//¶¨Òå¶ÔÏó
+	re_login://ÖØĞÂµÇÂ¼½Ó¿Ú
+	cout << setw(30) << setfill('*') << "*" << " »¶Ó­µÇÂ¼ [ÈËÊÂ] [¹¤×Ê] [¿¼ÇÚ] ÏµÍ³ " << setw(30) << setfill('*') << "* " << endl;
 	Manager::show_time();
 	cout << endl;
-	cout << " " << setw(20) << setfill(' ') << " " << "è¯·è¾“å…¥è´¦å·ï¼ˆå·¥å·ï¼‰:"  ;
+	cout << " " << setw(20) << setfill(' ') << " " << "ÇëÊäÈëÕËºÅ£¨¹¤ºÅ£©:"  ;
 	Manager::check_account(test);
-	cout << " " << setw(20) << setfill(' ') << " " << "       è¯·è¾“å…¥å¯†ç :";//å¯†ç ç»„æˆä¸ºï¼Œç¬¬ä¸€ä½éƒ¨é—¨ç¼–å·ï¼Œåé¢ä¸ºå·¥å·
-	char dep_num;//ç”¨äºæ¥æ”¶éƒ¨é—¨ç¼–å·
+	cout << " " << setw(20) << setfill(' ') << " " << "       ÇëÊäÈëÃÜÂë:";//ÃÜÂë×é³ÉÎª£¬µÚÒ»Î»²¿ÃÅ±àºÅ£¬ºóÃæÎª¹¤ºÅ
+	char dep_num;//ÓÃÓÚ½ÓÊÕ²¿ÃÅ±àºÅ
 	dep_num = Manager::check_password(test);
 	
-	cout<<endl << "å¯†ç æ­£ç¡®ï¼Œ";
+	cout<<endl << "ÃÜÂëÕıÈ·£¬";
 	system("pause");
 	system("cls");
 	
@@ -37,29 +31,29 @@ int main()
 	
 		{
 		menu_interface();
-		cout << "è¯·è¾“å…¥æ•°å­—ï¼Œè¿›å…¥ç›¸åº”åŠŸèƒ½:";
-		cin >> choice;//æ¥å—ç”¨æˆ·é€‰æ‹©çš„åŠŸèƒ½
-		switch (choice-48)//å°†å­—ç¬¦å‹è½¬æ¢ä¸ºintå‹é˜²æ­¢è¾“å…¥å­—æ¯æ—¶ç¨‹åºå´©æºƒ
+		cout << "ÇëÊäÈëÊı×Ö£¬½øÈëÏàÓ¦¹¦ÄÜ:";
+		cin >> choice;//½ÓÊÜÓÃ»§Ñ¡ÔñµÄ¹¦ÄÜ
+		switch (choice-48)//½«×Ö·ûĞÍ×ª»»ÎªintĞÍ·ÀÖ¹ÊäÈë×ÖÄ¸Ê±³ÌĞò±ÀÀ£
 		{
-		case 0:test.exitsyetem();//é€€å‡ºç³»ç»Ÿ
+		case 0:test.exitsyetem();//ÍË³öÏµÍ³
 			break;
-		case 1:test.add_member();      //å¢åŠ ä¿¡æ¯
+		case 1:test.add_member();      //Ôö¼ÓĞÅÏ¢
 			break;
-		case 2:Post::post_table();  test.showinfo(); //æ˜¾ç¤ºä¿¡æ¯
+		case 2:Post::post_table();  test.showinfo(); //ÏÔÊ¾ĞÅÏ¢
 			break;
-		case 3:  test.deletework();  //åˆ é™¤ä¿¡æ¯
+		case 3:  test.deletework();  //É¾³ıĞÅÏ¢
 			break;
-		case 4:  test.revise_ifo(); //ä¿®æ”¹
+		case 4:  test.revise_ifo(); //ĞŞ¸Ä
 			break;
-		case 5:test.search_display();       //æŸ¥æ‰¾
+		case 5:test.search_display();       //²éÕÒ
 			break;
-		case 6:test.SortByAccount();//æŒ‰ç¼–å·æ’åº
+		case 6:test.SortByAccount();//°´±àºÅÅÅĞò
 			break;
-		case 7: system("cls"); goto re_login; //é€€å‡ºç™»å½•
+		case 7: system("cls"); goto re_login; //ÍË³öµÇÂ¼
 			break;
-		case 8:test.show_today_att();//ä»Šæ—¥è€ƒå‹¤æƒ…å†µ
+		case 8:test.show_today_att();//½ñÈÕ¿¼ÇÚÇé¿ö
 		default :
-			cout << "è¾“å…¥é”™è¯¯ï¼Œé‡æ–°è¾“å…¥";
+			cout << "ÊäÈë´íÎó£¬ÖØĞÂÊäÈë";
 			system("pause");
 			system("cls");
 		}
@@ -70,25 +64,25 @@ int main()
 		while (true)
 		{
 		test.attendance_interface(test);
-				cout << "è¯·è¾“å…¥æ•°å­—ï¼Œè¿›å…¥ç›¸åº”åŠŸèƒ½:";
+				cout << "ÇëÊäÈëÊı×Ö£¬½øÈëÏàÓ¦¹¦ÄÜ:";
 				char choice;
 				cin >> choice;
 				switch (choice - 48)
 				{
-				case 0:test.exitsyetem();//é€€å‡ºç³»ç»Ÿ
+				case 0:test.exitsyetem();//ÍË³öÏµÍ³
 					break;
-				case 1:test.sign(test);//ä»Šæ—¥æ‰“å¡ç­¾åˆ°
+				case 1:test.sign(test);//½ñÈÕ´ò¿¨Ç©µ½
 					break;
-				case 2:test.ask_for_leave();//è¯·ç—…å‡æˆ–äº‹å‡
+				case 2:test.ask_for_leave();//Çë²¡¼Ù»òÊÂ¼Ù
 					break;
-				case 3:test.enquire_days();//ä¼‘å‡å¤©æ•°æŸ¥è¯¢
+				case 3:test.enquire_days();//Ğİ¼ÙÌìÊı²éÑ¯
 					break;
-				case 4:test.show_salay();//æœ¬æœˆè–ªæ°´æŸ¥è¯¢
+				case 4:test.show_salay();//±¾ÔÂĞ½Ë®²éÑ¯
 					break;
-				case 5:system("cls"); goto re_login;//é€€å‡ºç™»å½•
+				case 5:system("cls"); goto re_login;//ÍË³öµÇÂ¼
 					break;
 				default:
-					cout << "è¾“å…¥é”™è¯¯ï¼Œé‡æ–°è¾“å…¥";
+					cout << "ÊäÈë´íÎó£¬ÖØĞÂÊäÈë";
 					system("pause");
 					system("cls");
 
@@ -96,6 +90,22 @@ int main()
 		}
 		
 	}
+	
+	
+	//²âÊÔĞÅÏ¢ÏÔÊ¾¹¦ÄÜ
+	/*Post* sale = new Salemanager("¶ÅÑĞÊé", 20, "ÄĞ", "15059807469", "10002", 1);
+	sale->post_table();
+	sale->show_info();
+	delete (sale); 
+
+	Post* ceo = new CEO("¶ÅÑĞÊé", 20, "ÄĞ", "15059807469", "10002", 1);
+	ceo->show_info();
+	delete(ceo);
+	  
+	Post* saleman =new Saleman("¶ÅÑĞÊé", 20, "ÄĞ", "15059807469", "10003", 1);
+	saleman->show_info();
+	delete(saleman);*/
+	
 	system("pause"); 
 	return 0;
 }
