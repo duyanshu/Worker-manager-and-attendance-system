@@ -99,6 +99,6 @@ Manager test;//定义对象
 **First** and _Italic_ and `Code` text
 
 
-For more details see [杜研书的主页](https://duyanshu.girhub.io).
+For more details see [杜研书的主页](https://duyanshu.github.io).
 
 ### Under development...
