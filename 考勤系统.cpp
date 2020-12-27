@@ -98,19 +98,7 @@ int main()
 	}
 	
 	
-	//测试信息显示功能
-	/*Post* sale = new Salemanager("杜研书", 20, "男", "15059807469", "10002", 1);
-	sale->post_table();
-	sale->show_info();
-	delete (sale); 
-
-	Post* ceo = new CEO("杜研书", 20, "男", "15059807469", "10002", 1);
-	ceo->show_info();
-	delete(ceo);
-	  
-	Post* saleman =new Saleman("杜研书", 20, "男", "15059807469", "10003", 1);
-	saleman->show_info();
-	delete(saleman);*/
+	
 	
 	system("pause"); 
 	return 0;
